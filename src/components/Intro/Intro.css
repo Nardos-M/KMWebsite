@@ -1,0 +1,27 @@
+.intro{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 50px;
+
+    background:#f8f8f8;
+}
+
+.intro img{
+    width:100px;
+    height:100px;
+}
+
+.intro-center{
+    text-align:center;
+}
+
+.intro-center h1{
+    margin:0;
+}
+
+.intro-center h2{
+    margin:5px 0;
+    font-weight:normal;
+}

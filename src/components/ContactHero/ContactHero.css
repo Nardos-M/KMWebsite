@@ -1,0 +1,29 @@
+.contact-hero {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+
+  text-align: center;
+
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+}

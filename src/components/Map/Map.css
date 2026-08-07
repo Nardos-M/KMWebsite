@@ -1,0 +1,20 @@
+.map {
+  padding: 60px 10%;
+}
+
+.map h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.map-placeholder {
+  height: 400px;
+
+  border: 2px dashed gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fafafa;
+}

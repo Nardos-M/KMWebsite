@@ -1,0 +1,29 @@
+.social-links {
+  padding: 50px;
+
+  text-align: center;
+
+  background: #f8f8f8;
+}
+
+.social-links h2 {
+  margin-bottom: 25px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+
+  color: maroon;
+
+  font-weight: bold;
+}
+
+.social-icons a:hover {
+  color: darkred;
+}
