@@ -6,15 +6,18 @@ function About() {
 
   useEffect(() => {
     if (!location.hash) return;
-    const id = location.hash.slice(1);
+    const id = location.hash.slice(1); // removes the first character instead of #belives
     const el = document.getElementById(id);
     if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.scrollIntoView({ behavior: "smooth", block: "start" }); // scrolling until the section reaches the top
   }, [location.hash]);
 
   return (
     <main style={{ padding: "32px 18px", maxWidth: 980, margin: "0 auto" }}>
+      
+      <div className="fixed-title">
       <h1>About</h1>
+      </div>
 
       <section id="welcome" style={{ marginTop: 28 }}>
         <h2>Welcome</h2>
