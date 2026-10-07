@@ -38,7 +38,7 @@ function Map({
         </div>
       ) : (
         <div className="map-placeholder">
-          Add your address to show the map.
+        2020 27 Ave NE Calgary, AB
         </div>
       )}
 
