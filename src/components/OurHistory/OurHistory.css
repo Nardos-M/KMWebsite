@@ -1,0 +1,214 @@
+.history {
+  --history-accent: #8b0000;
+
+  padding: 16px 0 48px;
+}
+
+.history .page-header {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.history .page-header h2 {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.history__hero {
+  margin-top: 14px;
+  padding: 34px 22px 26px;
+  border-radius: 18px;
+  text-align: center;
+  background: radial-gradient(
+      1200px 420px at 50% -10%,
+      rgba(139, 0, 0, 0.16),
+      rgba(139, 0, 0, 0) 60%
+    ),
+    #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+}
+
+.history__headline {
+  margin: 0;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  letter-spacing: -0.02em;
+}
+
+.history__subhead {
+  margin: 10px auto 0;
+  max-width: 70ch;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.history__twoCol {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.history__card {
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  padding: 18px 18px 16px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.history__card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.1);
+}
+
+.history__kicker {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(139, 0, 0, 0.08);
+  color: var(--history-accent);
+  font-weight: 700;
+}
+
+.history__title {
+  margin: 10px 0 0;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.history__p {
+  margin: 10px 0 0;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.history__callout {
+  margin-top: 14px;
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(139, 0, 0, 0.04);
+  border: 1px solid rgba(139, 0, 0, 0.12);
+}
+
+.history__calloutTitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.history__calloutBody {
+  margin: 8px 0 0;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.history__stack {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.history__feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.history__feature:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.1);
+}
+
+.history__feature--reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+}
+
+.history__feature--reverse .history__media {
+  order: 2;
+}
+
+.history__feature--reverse .history__content {
+  order: 1;
+}
+
+.history__media {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: radial-gradient(
+      600px 260px at 50% 10%,
+      rgba(139, 0, 0, 0.18),
+      rgba(139, 0, 0, 0) 60%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02));
+  border: 1px dashed rgba(0, 0, 0, 0.18);
+  display: grid;
+  place-items: center;
+}
+
+.history__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.history__mediaInner {
+  text-align: center;
+  padding: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.history__mediaLabel {
+  display: block;
+  font-weight: 700;
+}
+
+.history__mediaHint {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.history__content {
+  padding: 2px 2px 0;
+}
+
+@media (max-width: 860px) {
+  .history__twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .history__feature,
+  .history__feature--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .history__feature--reverse .history__media,
+  .history__feature--reverse .history__content {
+    order: unset;
+  }
+}
+
+@media (max-width: 560px) {
+  .history__hero {
+    padding: 28px 16px 22px;
+  }
+
+  .history__feature {
+    padding: 14px;
+  }
+}

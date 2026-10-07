@@ -1,0 +1,224 @@
+.gallery {
+  --gallery-accent: #8b0000;
+  padding: 32px 18px 56px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery .page-header {
+  text-align: center;
+}
+
+.gallery .page-header h2 {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery__hero {
+  margin-top: 14px;
+  padding: 34px 22px 26px;
+  border-radius: 18px;
+  text-align: center;
+  background: radial-gradient(
+      1200px 420px at 50% -10%,
+      rgba(139, 0, 0, 0.16),
+      rgba(139, 0, 0, 0) 60%
+    ),
+    #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+}
+
+.gallery__headline {
+  margin: 0;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  letter-spacing: -0.02em;
+}
+
+.gallery__subhead {
+  margin: 10px auto 0;
+  max-width: 70ch;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.gallery__grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gallery__item {
+  grid-column: span 4;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border: 0;
+  padding: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #eee;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.gallery__item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.1);
+}
+
+.gallery__item:focus-visible {
+  outline: 3px solid rgba(139, 0, 0, 0.28);
+  outline-offset: 3px;
+}
+
+.gallery__item--hero {
+  grid-column: span 8;
+  grid-row: span 2;
+  aspect-ratio: auto;
+  min-height: 320px;
+}
+
+.gallery__item--wide {
+  grid-column: span 8;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery__item--tall {
+  grid-column: span 4;
+  grid-row: span 2;
+  aspect-ratio: 3 / 4;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 220ms ease;
+}
+
+.gallery__item:hover .gallery__img {
+  transform: scale(1.05);
+}
+
+.gallery__modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  z-index: 999;
+}
+
+.gallery__modal {
+  width: min(1100px, 100%);
+  height: min(74vh, 780px);
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.gallery__modalImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.gallery__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallery__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.gallery__nav--left {
+  left: 12px;
+}
+
+.gallery__nav--right {
+  right: 12px;
+}
+
+.gallery__caption {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 960px) {
+  .gallery__item {
+    grid-column: span 6;
+  }
+
+  .gallery__item--hero,
+  .gallery__item--wide {
+    grid-column: span 12;
+  }
+
+  .gallery__item--tall {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery__hero {
+    padding: 28px 16px 22px;
+  }
+
+  .gallery__grid {
+    gap: 10px;
+  }
+
+  .gallery__item,
+  .gallery__item--hero,
+  .gallery__item--wide,
+  .gallery__item--tall {
+    grid-column: span 12;
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+    min-height: unset;
+  }
+
+  .gallery__modal {
+    height: min(70vh, 700px);
+  }
+}
+

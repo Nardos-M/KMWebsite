@@ -53,34 +53,24 @@ function Navbar() {
           <Link role="menuitem" to="/about/welcome" onClick={() => setIsAboutOpen(false)}>
             Welcome
           </Link>
-          <Link role="menuitem" to="/about/beliefs" onClick={() => setIsAboutOpen(false)}>
+          {/* <Link role="menuitem" to="/about/beliefs" onClick={() => setIsAboutOpen(false)}>
             Beliefs
-          </Link>
+          </Link> */}
           <Link role="menuitem" to="/about/our-history" onClick={() => setIsAboutOpen(false)}>
             Our history
           </Link>
-          <Link role="menuitem" to="/about/st-kidanemihret" onClick={() => setIsAboutOpen(false)}>
-            St. Kidanemhret
-          </Link>
-          <Link role="menuitem" to="/about/our-church-history" onClick={() => setIsAboutOpen(false)}>
-            Our church History
-          </Link>
-          <Link role="menuitem" to="/about/our-clergy" onClick={() => setIsAboutOpen(false)}>
+          {/* <Link role="menuitem" to="/about/our-clergy" onClick={() => setIsAboutOpen(false)}>
             Our Clergy
           </Link>
           <Link role="menuitem" to="/about/group-of-deacons" onClick={() => setIsAboutOpen(false)}>
             Group of Decons
-          </Link>
+          </Link> */}
         </div>
       </div>
 
-      <Link to="/services">Services</Link>
-
-      <Link to="/news">News</Link>
+      <Link to="/st-kidanemihret">St. Kidanemhret Church</Link>
 
       <Link to="/gallery">Gallery</Link>
-
-      <Link to="/donate">Donate</Link>
 
       <Link to="/contact">Contact</Link>
     </nav>
