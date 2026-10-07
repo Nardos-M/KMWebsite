@@ -58,7 +58,7 @@ function Welcome({ faqs = DEFAULT_FAQS }) {
 
   return (
     <section id="welcome" className="welcome">
-      <PageHeader title="Welcome" />
+      <PageHeader title="እንኳን ድኅና መጣችሁ" />
 
       <div className="welcome__hero">
         <h1 className="welcome__headline">Welcome, we&apos;re glad you&apos;re here!</h1>

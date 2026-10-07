@@ -1,7 +1,7 @@
 import "./Intro.css";
 
 import logo from "../../assets/images/eotc-church-logo.jpg";
-import pope from "../../assets/images/EOTC-POPE-2.webp";
+import kmLogo from "../../assets/images/KM logo.png";
 
 function Intro() {
     return(
@@ -19,7 +19,7 @@ function Intro() {
             </div>
 
              <div className="intro-right">
-                <img src={pope} alt="Church Pope" />
+                <img src={kmLogo} alt="St. Kidanemhret logo" />
             </div>
 
 

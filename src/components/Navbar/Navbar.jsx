@@ -1,11 +1,12 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useId, useRef, useState } from "react";
 
 function Navbar() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const aboutMenuId = useId();
   const aboutContainerRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     function onDocumentMouseDown(event) {
@@ -18,21 +19,36 @@ function Navbar() {
       if (event.key === "Escape") setIsAboutOpen(false);
     }
 
+    function onWindowScroll() {
+      setIsAboutOpen(false);
+    }
+
     document.addEventListener("mousedown", onDocumentMouseDown);
     document.addEventListener("keydown", onDocumentKeyDown);
+    window.addEventListener("scroll", onWindowScroll, { passive: true });
 
     return () => {
       document.removeEventListener("mousedown", onDocumentMouseDown);
       document.removeEventListener("keydown", onDocumentKeyDown);
+      window.removeEventListener("scroll", onWindowScroll);
     };
   }, []);
+
+  useEffect(() => {
+    setIsAboutOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className="navbar">
 
       <Link to="/">Home</Link>
 
-      <div className="navDropdown" ref={aboutContainerRef}>
+      <div
+        className="navDropdown"
+        ref={aboutContainerRef}
+        onMouseEnter={() => setIsAboutOpen(true)}
+        onMouseLeave={() => setIsAboutOpen(false)}
+      >
         <button
           type="button"
           className="navDropdownToggle"

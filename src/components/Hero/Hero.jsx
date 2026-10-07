@@ -5,16 +5,16 @@ import heroImage1 from "../../assets/images/Hero-1.jpg";
 import heroImage2 from "../../assets/images/Hero 2.jpg";
 import heroImage3 from "../../assets/images/Hero 3.jpg";
 import heroImage4 from "../../assets/images/Hero 4.JPG";
-//import heroImage5 from "../../assets/images/Hero 5.jpg";
-//import heroImage6 from "../../assets/images/Hero 6.jpg";
+import heroImage5 from "../../assets/images/Hero 5.jpg";
+import heroImage6 from "../../assets/images/Hero 6.jpg";
 
 const IMAGES = [
   heroImage1,
   heroImage2,
   heroImage3,
   heroImage4,
-  //heroImage5,
-  //heroImage6,
+  heroImage5,
+  heroImage6,
 ];
 
 const INTERVAL_MS = 5000;

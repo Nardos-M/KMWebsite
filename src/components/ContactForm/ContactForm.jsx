@@ -6,26 +6,33 @@ function ContactForm() {
 
       <h2>Send Us a Message</h2>
 
-      <form>
+      <form
+      action="https://formspree.io/f/xeaeaekj"
+      method="POST"
+      >
 
         <input
           type="text"
+          name="name"
           placeholder="Full Name"
         />
 
         <input
           type="email"
+          name="email"
           placeholder="Email Address"
         />
 
         <input
           type="text"
+          name="subject"
           placeholder="Subject"
-        />
+          />
 
         <textarea
           rows="6"
           placeholder="Your Message"
+          required
         ></textarea>
 
         <button type="submit">
