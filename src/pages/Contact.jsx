@@ -9,7 +9,7 @@ function Contact() {
         <>
             <ContactHero />
             <ContactInfo />
-            <Map />
+            <Map address="2020 27 Ave NE, Calgary, AB" />
             <ContactForm />
             <SocialLinks />
         </>
